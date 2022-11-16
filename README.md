@@ -3,6 +3,7 @@
 - React;
 - Material UI;
 - Formik;
+- Nivo;
 
 
 # Project
