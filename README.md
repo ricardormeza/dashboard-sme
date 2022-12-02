@@ -21,7 +21,7 @@ Dashboard React
 
 [Original repository](https://github.com/ed-roh/react-admin-dashboard)
 
-
-
+DEMO 
+[Demo link]([https://github.com/ed-roh/react-admin-dashboard](https://dashboard-react-inky.vercel.app/))
 
 ###End# DashboardReact
