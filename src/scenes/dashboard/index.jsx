@@ -6,7 +6,8 @@ import DownloadOutlinedIcon from "@mui/icons-material/DownloadOutlined";
 import EmailIcon from "@mui/icons-material/Email";
 import PointOfSaleIcon from "@mui/icons-material/PointOfSale";
 import PersonAddIcon from "@mui/icons-material/PersonAdd";
-import TrafficIcon from "@mui/icons-material/Traffic";
+import ThumbUpAltIcon from '@mui/icons-material/ThumbUpAlt';
+import LensBlurIcon from '@mui/icons-material/LensBlur';
 import Header from "../../components/Header";
 import LineChart from "../../components/LineChart";
 import GeographyChart from "../../components/GeographyChart";
@@ -17,16 +18,16 @@ import ProgressCircle from "../../components/ProgressCircle";
 const Dashboard = () => {
     const theme = useTheme();
     const colors = tokens(theme.palette.mode);
-    const matches = useMediaQuery(theme.breakpoints.up('sm'));
+    // const matches = useMediaQuery(theme.breakpoints.up('sm'));
 
     return (
         <Box m="20px">
-            {`theme.breakpoints.up('sm') matches: ${matches}`}
+            {/* {`theme.breakpoints.up('sm')matches:${matches}`} */}
             {/* HEADER */}
             <Box display="flex" justifyContent="space-between" alignItems="center">
-                <Header title="DASHBOARD" subtitle="Welcome to your dashboard" />
+                <Header title="DASHBOARD" subtitle="Bienvenido al dashboard de Smart Mobility Enterprise" />
 
-                <Box>
+                {/* <Box>
                     <Button
                         sx={{
                             backgroundColor: colors.blueAccent[700],
@@ -39,7 +40,7 @@ const Dashboard = () => {
                         <DownloadOutlinedIcon sx={{ mr: "10px" }} />
                         Download Reports
                     </Button>
-                </Box>
+                </Box> */}
             </Box>
 
             {/* GRID & CHARTS */}
@@ -59,10 +60,10 @@ const Dashboard = () => {
                     
                 >
                     <StatBox
-                        title="12,361"
-                        subtitle="Emails Sent"
-                        progress="0.75"
-                        increase="+14%"
+                        title="384"
+                        subtitle="Cotizaciones enviadas"
+                        progress="0.35"
+                        increase="+34%"
                         icon={
                             <EmailIcon
                                 sx={{ color: colors.greenAccent[600], fontSize: "26px" }}
@@ -79,10 +80,10 @@ const Dashboard = () => {
                     justifyContent="center"
                 >
                     <StatBox
-                        title="431,225"
-                        subtitle="Sales Obtained"
-                        progress="0.50"
-                        increase="+21%"
+                        title="23,431,225"
+                        subtitle="Ventas realizadas"
+                        progress="0.40"
+                        increase="+16%"
                         icon={
                             <PointOfSaleIcon
                                 sx={{ color: colors.greenAccent[600], fontSize: "26px" }}
@@ -98,10 +99,10 @@ const Dashboard = () => {
                     justifyContent="center"
                 >
                     <StatBox
-                        title="32,441"
-                        subtitle="New Clients"
+                        title="41"
+                        subtitle="Nuevos Clientes"
                         progress="0.30"
-                        increase="+5%"
+                        increase="+12%"
                         icon={
                             <PersonAddIcon
                                 sx={{ color: colors.greenAccent[600], fontSize: "26px" }}
@@ -118,11 +119,11 @@ const Dashboard = () => {
                 >
                     <StatBox
                         title="1,325,134"
-                        subtitle="Traffic Received"
-                        progress="0.80"
+                        subtitle="Goal"
+                        progress="0.60"
                         increase="+43%"
                         icon={
-                            <TrafficIcon
+                            <LensBlurIcon
                                 sx={{ color: colors.greenAccent[600], fontSize: "26px" }}
                             />
                         }
@@ -148,19 +149,19 @@ const Dashboard = () => {
                                 fontWeight="600"
                                 color={colors.grey[100]}
                             >
-                                Revenue Generated
+                                Acumulado Pronostico septiembre
                             </Typography>
                             <Typography
                                 variant="h3"
                                 fontWeight="bold"
                                 color={colors.greenAccent[500]}
                             >
-                                $59,342.32
+                                $1,342,300.32
                             </Typography>
                         </Box>
                         <Box>
                             <IconButton>
-                                <DownloadOutlinedIcon
+                                <ThumbUpAltIcon
                                     sx={{ fontSize: "26px", color: colors.greenAccent[500] }}
                                 />
                             </IconButton>
@@ -172,7 +173,7 @@ const Dashboard = () => {
                 </Box>
                 <Box
                     gridColumn="span 4"
-                    gridRow="span 2"
+                    gridRow="span 4"
                     backgroundColor={colors.primary[400]}
                     overflow="auto"
                 >
@@ -185,7 +186,7 @@ const Dashboard = () => {
                         p="15px"
                     >
                         <Typography color={colors.grey[100]} variant="h5" fontWeight="600">
-                            Recent Transactions
+                            Ventas recientes
                         </Typography>
                     </Box>
                     {mockTransactions.map((transaction, i) => (
@@ -229,7 +230,7 @@ const Dashboard = () => {
                     p="30px"
                 >
                     <Typography variant="h5" fontWeight="600">
-                        Campaign
+                        Marketing
                     </Typography>
                     <Box
                         display="flex"
@@ -243,9 +244,9 @@ const Dashboard = () => {
                             color={colors.greenAccent[500]}
                             sx={{ mt: "15px" }}
                         >
-                            $48,352 revenue generated
+                            352 Leads generados
                         </Typography>
-                        <Typography>Includes extra misc expenditures and costs</Typography>
+                        <Typography>Redes sociales</Typography>
                     </Box>
                 </Box>
                 <Box
@@ -258,13 +259,13 @@ const Dashboard = () => {
                         fontWeight="600"
                         sx={{ padding: "30px 30px 0 30px" }}
                     >
-                        Sales Quantity
+                        Ventas generales
                     </Typography>
                     <Box height="250px" mt="-20px">
                         <BarChart isDashboard={true} />
                     </Box>
                 </Box>
-                <Box
+                {/* <Box
                     gridColumn="span 4"
                     gridRow="span 2"
                     backgroundColor={colors.primary[400]}
@@ -280,7 +281,7 @@ const Dashboard = () => {
                     <Box height="200px">
                         <GeographyChart isDashboard={true} />
                     </Box>
-                </Box>
+                </Box> */}
             </Box>
         </Box>
     );

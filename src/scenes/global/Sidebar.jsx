@@ -95,7 +95,7 @@ const Sidebar = () => {
                             alt="Foto de perfil"
                             width="100px"
                             height="100px"
-                            src={`../../assets/profile-User.png`}
+                            src={`../../assets/Smart-Mobility-Blanco.png`}
                             style={{cursor: "pointer", borderRadius:"50%"}}
                         />
                     </Box>
@@ -103,8 +103,8 @@ const Sidebar = () => {
                     <Typography variant="h2" color={colors.grey[100]} 
                     fontWeight="bold"
                     sx={{ m: "10px 0 0 0" }}
-                    >Ricky Ram</Typography>
-                    <Typography variant="h5" color={colors.greenAccent[500]}>Queen Café</Typography>
+                    >SME</Typography>
+                    <Typography variant="h5" color={colors.greenAccent[500]}>Smart Mobility</Typography>
                     </Box>
                 </Box>
             )}
@@ -152,7 +152,7 @@ const Sidebar = () => {
                     >
                     Pages
                     </Typography>
-                <Item 
+                {/* <Item 
                 title="Profile Form"
                 to="/form"
                 icon={<PersonOutlinedIcon/>}
@@ -165,7 +165,7 @@ const Sidebar = () => {
                 icon={<CalendarMonthOutlinedIcon/>}
                 selected={selected}
                 setSelected={setSelected}
-                />
+                /> */}
                 <Item 
                 title="FAQ Page"
                 to="/faq"
@@ -181,33 +181,33 @@ const Sidebar = () => {
                     Charts
                     </Typography>
                 <Item 
-                title="Bar Chart"
+                title="Avance General"
                 to="/bar"
                 icon={<BarChartOutlinedIcon/>}
                 selected={selected}
                 setSelected={setSelected}
                 />
                 <Item 
-                title="Pie Chart"
+                title="Metricas"
                 to="/pie"
                 icon={<MapOutlinedIcon/>}
                 selected={selected}
                 setSelected={setSelected}
                 />
                 <Item
-                title="Line Chart"
+                title="Ventas"
                 to="/line"
                 icon={<TimelineOutlinedIcon />}
                 selected={selected}
                 setSelected={setSelected}
                 />
-                <Item
+                {/* <Item
                 title="Geography Chart"
                 to="/geography"
                 icon={<MapOutlinedIcon />}
                 selected={selected}
                 setSelected={setSelected}
-                />
+                /> */}
 
             </Box>
             </Menu>
